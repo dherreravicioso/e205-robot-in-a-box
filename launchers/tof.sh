@@ -5,11 +5,8 @@ source /environment.sh
 # initialize launch file
 dt-launchfile-init
 
-# set module's health
-dt-set-module-healthy
-
-# launching app
-dt-exec roslaunch e205_top all_drivers.launch 
+# launch subscriber
+rosrun my_package ToFNodeForward.py
 
 # wait for app to end
 dt-launchfile-join

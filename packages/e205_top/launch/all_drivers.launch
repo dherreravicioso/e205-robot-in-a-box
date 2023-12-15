@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="veh" doc="Name of vehicle. ex: megaman"/>
+    <!-- <arg name="param_file_name" default="default" doc="Specify a param file. ex:default."/>
+    <arg name="robot_type"
+         doc="The type of the robot, e.g., duckiebot, watchtower, traffic_light, ..."/>
+    <arg name="robot_configuration"
+         doc="The configuration of the robot. For example DB19, DB20, ..."/>
+    <arg name="robot_xurdf" value="$(find duckiebot_interface)/urdf/$(arg robot_type).urdf.xacro"
+         doc="Location of the URDF XACRO file for the robot type"/>
+    <arg name="camera_disabled" default="$(optenv DT_SENSOR_CAMERA_DISABLE 0)"
+         doc="If 1 the camera node is not started."/> -->
+         
+    <!-- Vectornav IMU sensor: -->
+    <include file="$(find vectornav)/launch/vn100_imu_test.launch" />
+
+
+    <!-- Time-of-Flight sensor: Right Side -->
+    <!-- - DB21x: 1x ToF sensor at the Front Center      -->
+    <!-- <include file="$(find tof_driver)/launch/tof_node.launch"></include> -->
+
+    <node pkg="my_package" name="tof_node_right" type="tof_node_right.py" output="screen"> </node>
+
+    <node pkg="my_package" name="twist_control_node" type="twist_control_node.py" output="screen"> </node>
+
+
+
+    
+
+
+</launch>

@@ -1,2 +1,21 @@
 # LIST YOUR PYTHON3 PACKAGES HERE
 # NOTE: only place non-Duckietown libraries here; pin versions only if necessary
+
+# Jetson packages
+#   - 2.0.20 is the last version supporting Python3.8
+Jetson.GPIO<=2.0.20
+
+# RPi packages
+RPi.GPIO
+
+# dependencies for the OLED display
+luma.oled
+
+# dependencies for the IMU sensor
+adafruit-circuitpython-mpu6050
+
+# dependencies for the LED hardware test
+colorir
+
+# this is the last working version of pillow
+pillow==9.5.0

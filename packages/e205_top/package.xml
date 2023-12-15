@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>e205_top</name>
+  <version>1.0.0</version>
+  <description>E205 Big Launch File</description>
+
+  <license>GPLv3</license>
+<maintainer email="dherreravicioso@hmc.edu">Diego</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+
+  <run_depend>rospy</run_depend>
+
+
+</package>
