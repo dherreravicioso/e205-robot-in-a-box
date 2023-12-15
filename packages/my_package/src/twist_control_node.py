@@ -8,7 +8,7 @@ from duckietown_msgs.msg import Twist2DStamped
 
 # Twist command for controlling the linear and angular velocity of the frame
 VELOCITY = 0  # linear vel    , in m/s    , forward (+)
-OMEGA = 2.0     # angular vel   , rad/s     , counter clock wise (+)
+OMEGA = 0     # angular vel   , rad/s     , counter clock wise (+)
 
 
 class TwistControlNode(DTROS):

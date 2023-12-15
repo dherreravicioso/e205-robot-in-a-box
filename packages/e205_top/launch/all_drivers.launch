@@ -10,6 +10,9 @@
          doc="Location of the URDF XACRO file for the robot type"/>
     <arg name="camera_disabled" default="$(optenv DT_SENSOR_CAMERA_DISABLE 0)"
          doc="If 1 the camera node is not started."/> -->
+
+    <node pkg="my_package" name="particle_filter_node" type="particle_filter_node.py" output="screen"> </node>
+
          
     <!-- Vectornav IMU sensor: -->
     <include file="$(find vectornav)/launch/vn100_imu_test.launch" />
@@ -22,6 +25,8 @@
     <node pkg="my_package" name="tof_node_right" type="tof_node_right.py" output="screen"> </node>
 
     <node pkg="my_package" name="twist_control_node" type="twist_control_node.py" output="screen"> </node>
+
+
 
 
 

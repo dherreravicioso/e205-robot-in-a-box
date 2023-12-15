@@ -19,3 +19,7 @@ colorir
 
 # this is the last working version of pillow
 pillow==9.5.0
+
+# math libraries
+numpy
+scipy
