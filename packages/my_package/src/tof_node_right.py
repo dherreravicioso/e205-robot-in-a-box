@@ -112,7 +112,7 @@ class ToFNode(DTROS):
     def _timer_cb(self, _):
         # detect range
         distance_mm = self._sensor.get_distance()
-        rospy.loginfo(f"Distance: {distance_mm}")
+        rospy.loginfo(f"Distance: {distance_mm/1000}")
         # pack observation into a message
         msg = Range(
             header=Header(stamp=rospy.Time.now(), frame_id=f"{self._veh}/tof/{self._sensor_name}"),
